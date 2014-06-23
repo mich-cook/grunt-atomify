@@ -1,0 +1,35 @@
+{
+  "name": "grunt-atomify",
+  "description": "Use Grunt to atomify all the stuff in an automated way",
+  "version": "0.1.0",
+  "homepage": "https://github.com/mich-cook/grunt-atomify",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mich-cook/grunt-atomify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mich-cook/grunt-atomify/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mich-cook/grunt-atomify/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "atomify": "2.2.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "files": [
+    "tasks",
+    "LICENSE-MIT"
+  ]
+}
