@@ -14,10 +14,10 @@ module.exports = function(grunt) {
         var jsConfig = options.jsConfig;
         var atomifyConfig = {};
 
-        var lastSlash, path,
-            directory = '', directories;
-
         function mkdirIfNeeded(outputFile)  {
+            var lastSlash, path,
+                directory = '', directories;
+
             if(outputFile.lastIndexOf('/') > 0)  {
                 // mkdir the output if it doesn't exist
                 lastSlash = outputFile.lastIndexOf('/');
