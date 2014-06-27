@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 if(fs.existsSync(path) === false)  {
                     directories = path.split('/').forEach(function(element, index, array)  {
                         directory += element + '/';
-                        fs.mkdir(directory);
+                        fs.mkdirSync(directory);
                     });
                 }
             }
