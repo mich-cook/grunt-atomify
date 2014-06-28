@@ -13,6 +13,8 @@ module.exports = function(grunt) {
         var cssConfig = options.cssConfig;
         var jsConfig = options.jsConfig;
         var atomifyConfig = {};
+        var expectedCallbacks = 0;
+        var receivedCallbacks = 0;
 
         function mkdirIfNeeded(outputFile)  {
             var lastSlash, path,
@@ -38,6 +40,10 @@ module.exports = function(grunt) {
             mkdirIfNeeded(jsConfig.output);
             // add the JS config to the overall config that we're passing to atomify
             atomifyConfig.js = jsConfig;
+
+            if(jsConfig.output !== undefined)  {
+                expectedCallbacks +=1;
+            }
         }
 
         if(cssConfig !== undefined)  {
@@ -45,11 +51,18 @@ module.exports = function(grunt) {
             mkdirIfNeeded(cssConfig.output);
             // add the CSS config to the overall config that we're passing to atomify
             atomifyConfig.css = cssConfig;
+
+            if(cssConfig.output !== undefined)  {
+                expectedCallbacks +=1;
+            }
         }
 
         if((cssConfig !== undefined) || (jsConfig !== undefined))  {
             atomify(atomifyConfig, function(error)  {
-                done();
+                receivedCallbacks +=1;
+                if(receivedCallbacks === expectedCallbacks)  {
+                    done();
+                }
             });
         }  else   {
             done();  // nothing to do. done.
