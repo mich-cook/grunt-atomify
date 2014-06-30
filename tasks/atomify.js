@@ -5,9 +5,9 @@ var atomify = require('atomify');
 
 module.exports = function(grunt) {
 
-  grunt.registerTask('atomify', 'Atomify all the stuff grunt says to.', function() {
+  grunt.task.registerMultiTask('atomify', 'Atomify all the stuff grunt says to.', function() {
 
-        var options = this.options();
+        var options = this.data;
         var done = this.async();
 
         var cssConfig = options.cssConfig;
