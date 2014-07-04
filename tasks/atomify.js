@@ -59,6 +59,12 @@ module.exports = function(grunt) {
 
         if((cssConfig !== undefined) || (jsConfig !== undefined))  {
             atomify(atomifyConfig, function(error)  {
+                if (!!error) {
+                  var msg = 'Atomify error: ' + JSON.stringify(error);
+                  grunt.fail.warn(msg);
+                  done();
+                }
+
                 receivedCallbacks +=1;
                 if(receivedCallbacks === expectedCallbacks)  {
                     done();
