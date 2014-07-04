@@ -10,8 +10,8 @@ module.exports = function(grunt) {
         var options = this.data;
         var done = this.async();
 
-        var cssConfig = options.cssConfig;
-        var jsConfig = options.jsConfig;
+        var cssConfig = options.css;
+        var jsConfig = options.js;
         var atomifyConfig = {};
         var expectedCallbacks = 0;
         var receivedCallbacks = 0;
