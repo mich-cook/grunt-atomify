@@ -9,3 +9,6 @@ deploy:
     api_key: 
         secure: BgvXQxVYx3WOZRrfR54G6MrwluFRLOs07y781PKBaUykSjEoWfilwLtQ5C+v+HJiO0PSwqDwBOzix++CrMPMVao0pMiuB3aO4nKjSyJFd2EmH4rXDFD+HZFmFP/0IeEcA9E1lmGQwoZWcIcy0+RjeU3N1nvAYBoTRsYSDFq2ZKU=
     email: mich.cook+npm@gmail.com
+    on:
+        node: 0.10
+        node: 0.11
