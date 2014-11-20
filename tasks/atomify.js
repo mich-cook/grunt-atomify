@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
         var cssConfig = options.css;
         var jsConfig = options.js;
+        var serverConfig = options.server;
         var atomifyConfig = {};
         var expectedCallbacks = 0;
         var receivedCallbacks = 0;
@@ -32,6 +33,10 @@ module.exports = function(grunt) {
             if(cssConfig.output !== undefined)  {
                 expectedCallbacks +=1;
             }
+        }
+
+        if (!!serverConfig) {
+            atomifyConfig.server = serverConfig;
         }
 
         if((cssConfig !== undefined) || (jsConfig !== undefined))  {
