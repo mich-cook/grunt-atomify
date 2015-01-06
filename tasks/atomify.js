@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
         var cssConfig = options.css;
         var jsConfig = options.js;
+        var serverConfig = options.server;
         var atomifyConfig = {};
         var expectedCallbacks = 0;
         var receivedCallbacks = 0;
@@ -34,10 +35,15 @@ module.exports = function(grunt) {
             }
         }
 
+        if (!!serverConfig) {
+            atomifyConfig.server = serverConfig;
+        }
+
         if((cssConfig !== undefined) || (jsConfig !== undefined))  {
             atomify(atomifyConfig, function(error)  {
                 if (!!error) {
-                  var msg = 'Atomify error: ' + JSON.stringify(error);
+                  var msg = 'Atomify error: ' + JSON.stringify(error) +
+                    ', src: ' + JSON.stringify(src) + ', type: ' + JSON.stringify(type);
                   grunt.fail.warn(msg);
                   done();
                 }
