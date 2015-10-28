@@ -8,6 +8,8 @@ deploy:
     provider: npm
     api_key: 
         secure: g1o64f70D29MjIRz+nwhpcfSC6+g5IpKODcxm3hERFxVLpS3nUihG29M5zqbqJthYfkMtCCNRiFj/khMHELJX5OJMEajdhG9nBD4I3jTwS+P6IOvnhsJnCHo763Kepqcs9MgKiyzFK0/fEUHE93e3/ffIbpJuKdzPfXtKbtQ02g=
+    email:
+        secure: R6xxnXqChqYwVJCNrwgCCMtIZPRQ75V4VYqfqZtRY987JzeUu/QYgjQ3QPgegf1TpbRyBImRQsjJyGn1IiExY+BaM++EOK1Zx9z7IMKaohcE216CSzn3hh+M9ZC41V6AoG5AzzoIQPmLRMuVzK7+7OTQoeCaqC+a8t/2P4HUjTs=
     on:
         node: 0.10
         node: 0.11
