@@ -7,8 +7,7 @@ before_script:
 deploy:
     provider: npm
     api_key: 
-        secure: BgvXQxVYx3WOZRrfR54G6MrwluFRLOs07y781PKBaUykSjEoWfilwLtQ5C+v+HJiO0PSwqDwBOzix++CrMPMVao0pMiuB3aO4nKjSyJFd2EmH4rXDFD+HZFmFP/0IeEcA9E1lmGQwoZWcIcy0+RjeU3N1nvAYBoTRsYSDFq2ZKU=
-    email: mich.cook+npm@gmail.com
+        secure: g1o64f70D29MjIRz+nwhpcfSC6+g5IpKODcxm3hERFxVLpS3nUihG29M5zqbqJthYfkMtCCNRiFj/khMHELJX5OJMEajdhG9nBD4I3jTwS+P6IOvnhsJnCHo763Kepqcs9MgKiyzFK0/fEUHE93e3/ffIbpJuKdzPfXtKbtQ02g=
     on:
         node: 0.10
         node: 0.11
