@@ -7,7 +7,9 @@
     "name": "mich Cook"
   },
   "contributors": [
-    { "name": "Kevin Massaroni" }
+    {
+      "name": "Kevin Massaroni"
+    }
   ],
   "repository": {
     "type": "git",
@@ -29,7 +31,7 @@
     "atomify": "6.0.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.5"
+    "grunt": ">=0.4.0"
   },
   "keywords": [
     "gruntplugin"
